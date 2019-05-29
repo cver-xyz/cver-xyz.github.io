@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cver-xyz.github.io</id>
     <title>cver</title>
-    <updated>2019-05-29T01:21:28.844Z</updated>
+    <updated>2019-05-29T01:22:37.218Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cver-xyz.github.io"/>
     <link rel="self" href="https://cver-xyz.github.io/atom.xml"/>
@@ -38,15 +38,6 @@
 <li>Two-steps：1）构建中间特征对图像进行表示 2）利用中间特征进行推理识别</li>
 <li>利用空间信息对场景进行表示</li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://cver-xyz.github.io/post/about</id>
-        <link href="https://cver-xyz.github.io/post/about">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p>玩的了游戏，撸的了代码；搞过NLP，做过CV，走在ML的路上...</p>
 ]]></content>
     </entry>
 </feed>

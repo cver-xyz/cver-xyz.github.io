@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>test | cver</title>
+<link rel="shortcut icon" href="https://cver-xyz.github.io/favicon.ico?v=1559120551717">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://cver-xyz.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://cver-xyz.github.io">
+  <img class="avatar" src="https://cver-xyz.github.io/images/avatar.png?v=1559120551717" alt="">
+  </a>
+  <h1 class="site-title">
+    cver
+  </h1>
+  <p class="site-description">
+    点滴
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              test
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-05-29 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <h1>RGB-D Scene Recognition with Object-to-Object Relation</h1>
+<h2 id="c9ca60cb">场景识别存在的问题</h2>
+<p><br /></p>
+<ol start="1">
+  <li>场景是一个抽象的概念，而它又通常是由一些具体的物体或概念构成的</li>
+  <li>从一些low-level的视觉特征进行抽象概念的推理存在语义鸿沟</li>
+  <li>物体的共现不能很好的解决场景歧义的问题</li>
+</ol>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559112315616-5b9424fe-6e70-4be4-9333-d016e530eeed.png#align=left&amp;display=inline&amp;height=180&amp;originHeight=360&amp;originWidth=571&amp;size=0&amp;status=done&amp;width=286" style="max-width: 600px; width: 286px;" /><img src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559112314569-c9971e00-e2ec-4479-b8a9-695e76e05f24.png#align=left&amp;display=inline&amp;height=163&amp;originHeight=326&amp;originWidth=574&amp;size=0&amp;status=done&amp;width=287" style="max-width: 600px; width: 287px;" /></p>
+<p><br /></p>
+<h2 id="7e46caf4">目前的解决方案</h2>
+<p><br /></p>
+<ol start="1">
+  <li>通过构建一个“bag model”，利用low-level的视觉特征进行推理识别</li>
+  <li>Two-steps：1）构建中间特征对图像进行表示 2）利用中间特征进行推理识别</li>
+  <li>利用空间信息对场景进行表示，解决仅利用中间特征带来的歧义问题</li>
+</ol>
+<p><br /></p>
+<h2 id="7799086f">论文提出的解决方案</h2>
+<table class="lake-table" style="width: 721px;">
+  <colgroup>
+    <col width="240">
+    </col>
+    <col width="240">
+    </col>
+    <col width="240">
+    </col>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">立方体结构</td>
+      <td style="text-align: center;">深度图：更近更深</td>
+      <td style="text-align: center;">深度图：近距离焦距更深</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">
+        <p><img alt="pic1.jpeg" title="pic1.jpeg" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/jpeg/168400/1559113036888-2364f929-49b6-43de-af11-c894ade6d6df.jpeg#align=left&amp;display=inline&amp;height=90&amp;name=pic1.jpeg&amp;originHeight=90&amp;originWidth=120&amp;size=3852&amp;status=done&amp;width=120" style="max-width: 600px; width: 120px;" /></p>
+      </td>
+      <td style="text-align: center;">
+        <p><img alt="pic2.jpeg" title="pic2.jpeg" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/jpeg/168400/1559113045348-ec0c62dd-6b4a-4761-b04a-da5eed161993.jpeg#align=left&amp;display=inline&amp;height=90&amp;name=pic2.jpeg&amp;originHeight=90&amp;originWidth=120&amp;size=1691&amp;status=done&amp;width=120" style="max-width: 600px; width: 120px;" /></p>
+      </td>
+      <td style="text-align: center;">
+        <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2019/jpeg/168400/1559112623902-d9719af6-ae5f-4b51-aeda-be582916074d.jpeg#align=left&amp;display=inline&amp;height=90&amp;originHeight=90&amp;originWidth=120&amp;size=0&amp;status=done&amp;width=120" style="max-width: 600px; width: 120px;" /></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ol start="1">
+  <li>利用RGB图像信息和depth data进行图像目标检测，得到检测物体的bounding boxes</li>
+  <li>将得到的候选框合并</li>
+  <li>然后利用识别结果构建object-to-object relation（OOR）表示</li>
+  <li>结合OOR表示、local feature、global feature进行场景分类识别</li>
+</ol>
+<p><img alt="share.jpg" title="share.jpg" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/jpeg/168400/1559117537508-0c136ac6-976b-486c-b299-cfb4f5434522.jpeg#align=left&amp;display=inline&amp;height=331&amp;name=share.jpg&amp;originHeight=960&amp;originWidth=1280&amp;size=185413&amp;status=done&amp;width=441" style="max-width: 600px; width: 441px;" /></p>
+<p><br /></p>
+<h2 id="P1Ml8">基于物体关系的图像表示</h2>
+<p><br /></p>
+<h3 id="43770a54">Object-to-object relation representation</h3>
+<p><br /></p>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559112317122-3fcd68e4-a33f-407e-849f-d7e1a6968e27.png#align=left&amp;display=inline&amp;height=388&amp;originHeight=388&amp;originWidth=444&amp;size=0&amp;status=done&amp;width=444" style="max-width: 600px; width: 444px;" /></p>
+<p><br /></p>
+<p><strong>1）利用中间特征对图片进行表示</strong></p>
+<p><br /></p>
+<p>通常情况可以利用图像中的物体分布来作为图像的中间特征表示：</p>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/__latex/8048e5aa8e9da5334c8635b2c8ce2aca.svg#card=math&amp;code=P_%7BO%7D%5E%7BI%7D%3D%5Cleft%5Bp_%7B1%7D%5E%7BI%7D%2C%20p_%7B2%7D%5E%7BI%7D%2C%20%5Cldots%2C%20p_%7B%7CO%7C%7D%5E%7BI%7D%5Cright%5D&amp;height=36&amp;width=166" style="max-width: 600px; width: 166px;" /></p>
+<p>其中，<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/9c39aa45f293591edf9383eaecf522f5.svg#card=math&amp;code=p_%7Bi%7D%5E%7BI%7D&amp;height=24&amp;width=16" style="max-width: 600px; width: 16px;" />表示物体<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/865c0c0b4ab0e063e5caa3387c1a8741.svg#card=math&amp;code=i&amp;height=24&amp;width=6" style="max-width: 600px; width: 6px;" />在图像<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/dd7536794b63bf90eccfd37f9b147d7f.svg#card=math&amp;code=I&amp;height=24&amp;width=9" style="max-width: 600px; width: 9px;" />中出现的频率，<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/f186217753c37b9b9f958d906208506e.svg#card=math&amp;code=O&amp;height=24&amp;width=13" style="max-width: 600px; width: 13px;" />表示所有物体的合集。</p>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559112313919-1571e6a4-d36d-4982-aeef-eaffa39da368.png#align=left&amp;display=inline&amp;height=230&amp;originHeight=460&amp;originWidth=590&amp;size=0&amp;status=done&amp;width=295" style="max-width: 600px; width: 295px;" /></p>
+<p><br /></p>
+<p>更具有普适性的话，可以利用物体的共现概率矩阵来表示：</p>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/__latex/8bea825b210b07461cfcc04deaedace3.svg#card=math&amp;code=P_%7BO%20O%7D%5E%7BI%7D%3D%5Cleft%5B%20%5Cbegin%7Barray%7D%7Bccc%7D%7Bp_%7B11%7D%5E%7BI%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7Bp_%7B1%7CO%7C%7D%5E%7BI%7D%7D%20%5C%5C%20%7B%5Cvdots%7D%20%26%20%7B%5Cddots%7D%20%26%20%7B%5Cvdots%7D%20%5C%5C%20%7Bp_%7B%7CO%7C%201%7D%5E%7BI%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7Bp_%7B%7CO%7C%7CO%7C%7D%5E%7BI%7D%7D%5Cend%7Barray%7D%5Cright%5D&amp;height=95&amp;width=213" style="max-width: 600px; width: 213px;" /></p>
+<p>其中，<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/62d39386a36b27635db7c6b8c57275cb.svg#card=math&amp;code=p_%7Bi%20j%7D%5E%7BI%7D&amp;height=27&amp;width=20" style="max-width: 600px; width: 20px;" />表示物体<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/865c0c0b4ab0e063e5caa3387c1a8741.svg#card=math&amp;code=i&amp;height=24&amp;width=6" style="max-width: 600px; width: 6px;" />和<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/363b122c528f54df4a0446b6bab05515.svg#card=math&amp;code=j&amp;height=24&amp;width=7" style="max-width: 600px; width: 7px;" />的共现频率。</p>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559112314691-1da3c794-312a-408a-80bf-0038ab14d5a4.png#align=left&amp;display=inline&amp;height=236&amp;originHeight=472&amp;originWidth=602&amp;size=0&amp;status=done&amp;width=301" style="max-width: 600px; width: 301px;" /></p>
+<p><br /></p>
+<p><strong>2）利用OOR对图片进行表示</strong></p>
+<p><br /></p>
+<p>物体与物体间的关系可以用一个三元组来存储其信息<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/3c0a3852108755f5cdaa80a10cefb2b6.svg#card=math&amp;code=%5Clangle%5Ctext%20%7Bobject%7D%2C%20%5Ctext%20%7B%20relation%2C%20object%20%7D%5Crangle&amp;height=24&amp;width=186" style="max-width: 600px; width: 186px;" />，然后就可以用一个tensor来表示OOR特征<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/ba8edcc84266e33c4f97835a6b2941d8.svg#card=math&amp;code=P_%7BOOR%7D%5E%7BI%7D%20%5Cin%20R%5E%7B%7CO%7C%20%5Ctimes%7CV%7C%20%5Ctimes%7CO%7C%7D&amp;height=26&amp;width=143" style="max-width: 600px; width: 143px;" /><em>，</em>其中<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/5206560a306a2e085a437fd258eb57ce.svg#card=math&amp;code=V&amp;height=24&amp;width=13" style="max-width: 600px; width: 13px;" />是物体间相对关系的集合，<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/5206560a306a2e085a437fd258eb57ce.svg#card=math&amp;code=V&amp;height=24&amp;width=13" style="max-width: 600px; width: 13px;" />利用两个物体的bounding box坐标来定义。假定某一个物体的bounding box坐标为<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/26cfa4108b84844d22d21f3a5497821f.svg#card=math&amp;code=b%3D%5Cleft%5Bx_%7Bl%7D%2C%20y_%7Bu%7D%2C%20x_%7Br%7D%2C%20y_%7Bd%7D%5Cright%5D&amp;height=24&amp;width=128" style="max-width: 600px; width: 128px;" />，其中<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/749b59c8695c32e17648e0d40460dccf.svg#card=math&amp;code=%5Cleft%5Bx_%7Bl%7D%2C%20y_%7Bu%7D%5Cright%5D&amp;height=24&amp;width=49" style="max-width: 600px; width: 49px;" />是左上角坐标，<em><img src="https://intranetproxy.alipay.com/skylark/lark/__latex/8b17d01981a2196f061ddf419b52b25b.svg#card=math&amp;code=%5Cleft%5Bx_%7Br%7D%2C%20y_%7Bd%7D%5Cright%5D&amp;height=24&amp;width=51" style="max-width: 600px; width: 51px;" /></em>是右下角坐标，那么<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/5206560a306a2e085a437fd258eb57ce.svg#card=math&amp;code=V&amp;height=24&amp;width=13" style="max-width: 600px; width: 13px;" />的定义如下：</p>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/__latex/c3be29ebbaa114b877da07e907518264.svg#card=math&amp;code=%5Cbegin%7Baligned%7D%20V%28i%2C%20j%29%20%26%3D%5Cleft%5Bf%5Cleft%28b%5E%7Bi%7D-b%5E%7Bj%7D%5Cright%29%5Cright%5D%20%5C%5C%20%26%3D%5Cleft%5Bf%5Cleft%28x_%7Bl%7D%5E%7Bi%7D-x_%7Bl%7D%5E%7Bj%7D%5Cright%29%2C%20f%5Cleft%28y_%7Bu%7D%5E%7Bi%7D-y_%7Bu%7D%5E%7Bj%7D%5Cright%29%2C%20f%5Cleft%28x_%7Br%7D%5E%7Bi%7D-x_%7Br%7D%5E%7Bj%7D%5Cright%29%2C%20f%5Cleft%28x_%7Bd%7D%5E%7Bi%7D-x_%7Bd%7D%5E%7Bj%7D%5Cright%29%5Cright%5D%20%5Cend%7Baligned%7D&amp;height=59&amp;width=474" style="max-width: 600px; width: 474px;" /></p>
+<p>其中<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/8fb3d0806d26a96aa43572d876289ba4.svg#card=math&amp;code=f%28x%29%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bll%7D%7B0%2C%7D%20%26%20%7B%5Ctext%20%7B%20if%20%7D%20%5Cquad%20x%3C%3D0%7D%20%5C%5C%20%7B1%2C%7D%20%26%20%7B%5Ctext%20%7B%20if%20%7D%20%5Cquad%20x%3E0%7D%5Cend%7Barray%7D%5Cright.&amp;height=46&amp;width=194" style="max-width: 600px; width: 194px;" />，因此物体间的关系有<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/c57be6e00a9d30ac65a56f79e402f3d8.svg#card=math&amp;code=%7CV%7C%3D2%5E%7B4%7D%3D16&amp;height=24&amp;width=102" style="max-width: 600px; width: 102px;" />种。</p>
+<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559112316105-352b04a5-ae7c-437a-8951-5e99788f6901.png#align=left&amp;display=inline&amp;height=501&amp;originHeight=1002&amp;originWidth=1086&amp;size=0&amp;status=done&amp;width=543" style="max-width: 600px; width: 543px;" /></p>
+<p><br /></p>
+<h3 id="bRD3s">利用OOR表示方式进行场景识别的分析</h3>
+<p>基于上面给出的表示方式，这里给出四种简单的利用其进行场景分析的方式：</p>
+<p>1）<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/f21427674b2e49d8b62e3b5dfa025486.svg#card=math&amp;code=P_%7BS%7D%5E%7BI%7D%3DP_%7BO%7D%5E%7BI%7D%20W%5E%7B%5Ctop%7D&amp;height=25&amp;width=96" style="max-width: 600px; width: 96px;" /><span>，其中<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/61e9c06ea9a85a5088a499df6458d276.svg#card=math&amp;code=W&amp;height=24&amp;width=18" style="max-width: 600px; width: 18px;" /><span>矩阵的每一个元素<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/ce1e44c50d69799c9bdbea431f33f43d.svg#card=math&amp;code=W_%7Bso%7D&amp;height=24&amp;width=29" style="max-width: 600px; width: 29px;" />表示场景<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/03c7c0ace395d80182db07ae2c30f034.svg#card=math&amp;code=s&amp;height=24&amp;width=8" style="max-width: 600px; width: 8px;" /><span>和物体<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/d95679752134a2d9eb61dbd7b91c4bcc.svg#card=math&amp;code=o&amp;height=24&amp;width=8" style="max-width: 600px; width: 8px;" /><span>的贡献概率</span></span></span></span></p>
+<p><span><span><span><span>2）<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/81d96f11f43466c5ddd701ed2aed9fe6.svg#card=math&amp;code=P_%7BO%7D%5E%7BI%7D&amp;height=24&amp;width=22" style="max-width: 600px; width: 22px;" /><span>结合SVM分类器</span></span></span></span></span></p>
+<p><span><span><span><span><span>3）</span></span></span></span></span><img src="https://intranetproxy.alipay.com/skylark/lark/__latex/3b2ad39ea0e8df76b0b6a08bf2f14ac4.svg#card=math&amp;code=P_%7BOO%7D%5E%7BI%7D&amp;height=24&amp;width=31" style="max-width: 600px; width: 31px;" /><span>结合SVM分类器</span></p>
+<p><span>4）</span><img src="https://intranetproxy.alipay.com/skylark/lark/__latex/b35a53b786e1166da1058d1e8ea8aa15.svg#card=math&amp;code=P_%7BOOR%7D%5E%7BI%7D&amp;height=24&amp;width=40" style="max-width: 600px; width: 40px;" /><span>结合SVM分类器</span></p>
+<p><span><br /></span></p>
+<p>下图是上面集中方式的结果分析：</p>
+<p><img alt="image.png" title="image.png" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559113946747-2508732c-f14b-42ea-9476-c26029d6fcda.png#align=left&amp;display=inline&amp;height=377&amp;name=image.png&amp;originHeight=754&amp;originWidth=3090&amp;size=2150461&amp;status=done&amp;width=1545" style="max-width: 600px; width: 1545px;" /></p>
+<p><br /></p>
+<p>结论：</p>
+<p style="text-indent: 2em;">1）SVM具有更强的表达能力</p>
+<p style="text-indent: 2em;">2）<img src="https://intranetproxy.alipay.com/skylark/lark/__latex/b35a53b786e1166da1058d1e8ea8aa15.svg#card=math&amp;code=P_%7BOOR%7D%5E%7BI%7D&amp;height=24&amp;width=40" style="max-width: 600px; width: 40px;" /><span>能够更好的表达图像语义</span></p>
+<p style="text-indent: 2em;"><span>3）仅依靠图像中物体的分布进行图像表示具有较多的歧义性</span></p>
+<p><span><img alt="image.png" title="image.png" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559115176325-9dfb0a48-ebeb-43b0-bc38-3e4ad12ce9e4.png#align=left&amp;display=inline&amp;height=401&amp;name=image.png&amp;originHeight=1604&amp;originWidth=2008&amp;size=1235185&amp;status=done&amp;width=502" style="max-width: 600px; width: 502px;" /></span></p>
+<p><span><img alt="image.png" title="image.png" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559115215547-b9eb3c3e-ee0b-4ea7-8134-9391dc1abc61.png#align=left&amp;display=inline&amp;height=405&amp;name=image.png&amp;originHeight=1618&amp;originWidth=1988&amp;size=1133564&amp;status=done&amp;width=497" style="max-width: 600px; width: 497px;" /></span></p>
+<p><span><br /></span></p>
+<h2 id="OqXBE">实验</h2>
+<p>数据集选用<span class="lake-fontsize-11">NYU
+Depth Dataset version 2 (NYUD2) 和 SUN RGB-D</span></p>
+<table class="lake-table" style="width: 492px;">
+  <colgroup>
+    <col width="136">
+    </col>
+    <col width="188">
+    </col>
+    <col width="167">
+    </col>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>
+        <p>数据集</p>
+      </td>
+      <td>
+        <p>类别数量</p>
+      </td>
+      <td>
+        <p>训练/测试 图像数量</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><span>NYUD2</span></p>
+      </td>
+      <td>
+        <p><span class="lake-fontsize-11">27（重新合并为10类）</span></p>
+      </td>
+      <td>
+        <p>795/654</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><span>SUN RGB-D</span></p>
+      </td>
+      <td>
+        <p>40（选择了常见的19类）</p>
+      </td>
+      <td>
+        <p>4845/4659</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><img alt="image.png" title="image.png" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559118542615-24e6f0f7-da52-4720-bb01-58fd229a3ad1.png#align=left&amp;display=inline&amp;height=170&amp;name=image.png&amp;originHeight=339&amp;originWidth=621&amp;size=66547&amp;status=done&amp;width=310.5" style="max-width: 600px; width: 310.5px;" /><img alt="image.png" title="image.png" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559118555797-083fa2b9-6750-45ff-973f-de795376d9d6.png#align=left&amp;display=inline&amp;height=84&amp;name=image.png&amp;originHeight=169&amp;originWidth=625&amp;size=42479&amp;status=done&amp;width=312.5" style="max-width: 600px; width: 312.5px;" /></p>
+<p><img alt="image.png" title="image.png" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559118567505-f8152d1d-9538-4c89-9c9f-4464bccb89f0.png#align=left&amp;display=inline&amp;height=148&amp;name=image.png&amp;originHeight=295&amp;originWidth=547&amp;size=74490&amp;status=done&amp;width=273.5" style="max-width: 600px; width: 273.5px;" /><img alt="image.png" title="image.png" src="https://intranetproxy.alipay.com/skylark/lark/0/2019/png/168400/1559118575876-8f7dbdad-27da-4a0b-9e6b-22e62158a43e.png#align=left&amp;display=inline&amp;height=192&amp;name=image.png&amp;originHeight=384&amp;originWidth=497&amp;size=87395&amp;status=done&amp;width=248.5" style="max-width: 600px; width: 248.5px;" />
+</p>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://cver-xyz.github.io/post/lun-wen-yue-du-rgb-d-scene-recognition-with-object-to-object-relation">
+              <h3 class="post-title">
+                【论文阅读】RGB-D Scene Recognition with Object-to-Object Relation
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://cver-xyz.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

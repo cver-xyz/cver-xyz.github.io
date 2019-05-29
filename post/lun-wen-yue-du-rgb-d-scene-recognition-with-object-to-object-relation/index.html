@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>【论文阅读】RGB-D Scene Recognition with Object-to-Object Relation | cver</title>
-<link rel="shortcut icon" href="https://cver-xyz.github.io/favicon.ico?v=1559047511638">
+<link rel="shortcut icon" href="https://cver-xyz.github.io/favicon.ico?v=1559092886981">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://cver-xyz.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://cver-xyz.github.io">
-  <img class="avatar" src="https://cver-xyz.github.io/images/avatar.png?v=1559047511638" alt="">
+  <img class="avatar" src="https://cver-xyz.github.io/images/avatar.png?v=1559092886981" alt="">
   </a>
   <h1 class="site-title">
     cver
@@ -88,10 +88,17 @@
 <ol>
 <li>场景是一个抽象的概念，而它又通常是由一些具体的物体或概念构成的</li>
 <li>从一些low-level的视觉特征进行抽象概念的推理存在语义鸿沟</li>
+<li>物体的共现不能很好的解决场景歧义的问题</li>
 </ol>
 <!-- more -->
 <p><img src="https://cver-xyz.github.io/post-images/1559046966098.png" alt="">
 <img src="https://cver-xyz.github.io/post-images/1559046983613.png" alt=""></p>
+<h2 id="目前的解决方案">目前的解决方案</h2>
+<ol>
+<li>通过构建一个“bag model”，利用low-level的视觉特征进行推理识别</li>
+<li>Two-steps：1）构建中间特征对图像进行表示 2）利用中间特征进行推理识别</li>
+<li>利用空间信息对场景进行表示</li>
+</ol>
 
             </div>
           </article>

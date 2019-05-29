@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cver-xyz.github.io</id>
     <title>cver</title>
-    <updated>2019-05-28T12:45:14.077Z</updated>
+    <updated>2019-05-29T01:21:28.844Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cver-xyz.github.io"/>
     <link rel="self" href="https://cver-xyz.github.io/atom.xml"/>
@@ -20,16 +20,24 @@
 <ol>
 <li>场景是一个抽象的概念，而它又通常是由一些具体的物体或概念构成的</li>
 <li>从一些low-level的视觉特征进行抽象概念的推理存在语义鸿沟</li>
+<li>物体的共现不能很好的解决场景歧义的问题</li>
 </ol>
 ]]></summary>
         <content type="html"><![CDATA[<h2 id="场景识别存在的问题">场景识别存在的问题</h2>
 <ol>
 <li>场景是一个抽象的概念，而它又通常是由一些具体的物体或概念构成的</li>
 <li>从一些low-level的视觉特征进行抽象概念的推理存在语义鸿沟</li>
+<li>物体的共现不能很好的解决场景歧义的问题</li>
 </ol>
 <!-- more -->
 <p><img src="https://cver-xyz.github.io/post-images/1559046966098.png" alt="">
 <img src="https://cver-xyz.github.io/post-images/1559046983613.png" alt=""></p>
+<h2 id="目前的解决方案">目前的解决方案</h2>
+<ol>
+<li>通过构建一个“bag model”，利用low-level的视觉特征进行推理识别</li>
+<li>Two-steps：1）构建中间特征对图像进行表示 2）利用中间特征进行推理识别</li>
+<li>利用空间信息对场景进行表示</li>
+</ol>
 ]]></content>
     </entry>
     <entry>
@@ -38,39 +46,7 @@
         <link href="https://cver-xyz.github.io/post/about">
         </link>
         <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p>这是关于的页面，可以在这里向世界介绍你！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://cver-xyz.github.io/post/hello-gridea</id>
-        <link href="https://cver-xyz.github.io/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇<img src="https://cver-xyz.github.io/post-images/1559019261443.png" alt=""></h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <content type="html"><![CDATA[<p>玩的了游戏，撸的了代码；搞过NLP，做过CV，走在ML的路上...</p>
 ]]></content>
     </entry>
 </feed>

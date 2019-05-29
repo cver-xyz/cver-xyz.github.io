@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cver-xyz.github.io</id>
     <title>cver</title>
-    <updated>2019-05-29T01:22:37.218Z</updated>
+    <updated>2019-05-29T03:15:42.969Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cver-xyz.github.io"/>
     <link rel="self" href="https://cver-xyz.github.io/atom.xml"/>
@@ -36,8 +36,31 @@
 <ol>
 <li>通过构建一个“bag model”，利用low-level的视觉特征进行推理识别</li>
 <li>Two-steps：1）构建中间特征对图像进行表示 2）利用中间特征进行推理识别</li>
-<li>利用空间信息对场景进行表示</li>
+<li>利用空间信息对场景进行表示，解决仅利用中间特征带来的歧义问题</li>
 </ol>
+<h2 id="论文提出的解决方案">论文提出的解决方案</h2>
+<ol>
+<li>利用RGB图像信息和depth data进行图像目标检测，得到检测物体的bounding boxes</li>
+<li>将得到的候选框合并</li>
+<li>然后利用识别结果构建object-to-object relation（OOR）表示</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">立方体结构</th>
+<th style="text-align:center">深度图：更近更深</th>
+<th style="text-align:center">深度图：近距离焦距更深</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://cver-xyz.github.io/post-images/1559093530432.jpeg" alt=""></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="object-to-object-relation-representation">Object-to-object relation representation</h3>
 ]]></content>
     </entry>
 </feed>

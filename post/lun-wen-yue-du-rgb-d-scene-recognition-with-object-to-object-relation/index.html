@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>【论文阅读】RGB-D Scene Recognition with Object-to-Object Relation | cver</title>
-<link rel="shortcut icon" href="https://cver-xyz.github.io/favicon.ico?v=1559092955652">
+<link rel="shortcut icon" href="https://cver-xyz.github.io/favicon.ico?v=1559099702884">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://cver-xyz.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://cver-xyz.github.io">
-  <img class="avatar" src="https://cver-xyz.github.io/images/avatar.png?v=1559092955652" alt="">
+  <img class="avatar" src="https://cver-xyz.github.io/images/avatar.png?v=1559099702884" alt="">
   </a>
   <h1 class="site-title">
     cver
@@ -97,8 +97,31 @@
 <ol>
 <li>通过构建一个“bag model”，利用low-level的视觉特征进行推理识别</li>
 <li>Two-steps：1）构建中间特征对图像进行表示 2）利用中间特征进行推理识别</li>
-<li>利用空间信息对场景进行表示</li>
+<li>利用空间信息对场景进行表示，解决仅利用中间特征带来的歧义问题</li>
 </ol>
+<h2 id="论文提出的解决方案">论文提出的解决方案</h2>
+<ol>
+<li>利用RGB图像信息和depth data进行图像目标检测，得到检测物体的bounding boxes</li>
+<li>将得到的候选框合并</li>
+<li>然后利用识别结果构建object-to-object relation（OOR）表示</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">立方体结构</th>
+<th style="text-align:center">深度图：更近更深</th>
+<th style="text-align:center">深度图：近距离焦距更深</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://cver-xyz.github.io/post-images/1559093530432.jpeg" alt=""></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="object-to-object-relation-representation">Object-to-object relation representation</h3>
 
             </div>
           </article>
